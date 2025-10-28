@@ -6,11 +6,11 @@ chapter: false
    
 # Internship Report
 ### Student Information:
-&emsp; **Full Name:** Nguyen Duc Tai
+&emsp; **Full Name:** Dinh Viet Vinh Khanh
 
-&emsp; **Phone Number:** 0961287204
+&emsp; **Phone Number:** 0353513278
 
-&emsp; **Email:** taindse180365@fpt.edu.vn
+&emsp; **Email:** khanhdvvse181518@fpt.edu.vn
 
 &emsp; **University:** Ho Chi Minh City FPT University
 
@@ -24,7 +24,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 30/08/2025 to 08/03/2025
 
-![Your profile picture](/images/DucTai.png)
+![Your profile picture](\images\khanh.webp)
 
 ### Report Content
 

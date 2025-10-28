@@ -1,5 +1,5 @@
-baseURL = "https://thienluhoan.github.io/workshop-template/"
-relativeURLs = true
+baseURL = "https://khanh-0.github.io/aws/"
+relativeURLs = false
 canonifyURLs = true
 
 # Change the default theme to be use when building the site with Hugo

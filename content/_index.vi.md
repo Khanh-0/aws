@@ -6,11 +6,11 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Đức Tài 
+&emsp; **Họ và tên:** Đinh Viết Vĩnh Khánh  
 
-&emsp; **Số điện thoại:** 0961287204
+&emsp; **Số điện thoại:** 0353513278
 
-&emsp; **Email:** taindse180365@fpt.edu.vn
+&emsp; **Email:** khanhdvvse181518@fpt.edu.vn
 
 &emsp; **Trường:** Đại Học FPT HCM
 
@@ -24,7 +24,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 30/08/2025 đến ngày 08/03/2026
 
-![Ảnh đại diện của bạn](/images/DucTai.png)
+![Ảnh đại diện của bạn](\images\khanh.webp)
 
 
 
