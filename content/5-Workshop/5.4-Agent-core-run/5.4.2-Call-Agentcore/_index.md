@@ -16,7 +16,7 @@ Use the command:
 agentcore invoke "{'prompt': 'Tell me about roaming activations'}"
 ```
 
-![test1](/aws/static/images/5-Workshop/5.4-S3-onprem/test1.png)
+![test1](/images/5-Workshop/5.4-S3-onprem/test1.png)
 
 The Agent will respond based on the data you deployed (database + logic in your code).
 
@@ -29,7 +29,7 @@ After the first question, send another related one — for example:
 agentcore invoke "{'prompt': 'Activate it for Vietnam'}"
 ```
 
-![test2](/aws/static/images/5-Workshop/5.4-S3-onprem/test2.png)
+![test2](/images/5-Workshop/5.4-S3-onprem/test2.png)
 
 Then ask:
 
@@ -37,7 +37,7 @@ Then ask:
 agentcore invoke "{'prompt': 'which country was i referring to'}"
 ```
 
-![test3](/aws/static/images/5-Workshop/5.4-S3-onprem/test3.png)
+![test3](/images/5-Workshop/5.4-S3-onprem/test3.png)
 
 If the Agent responds correctly and remembers the previous information → this confirms the **Memory is working** and AgentCore is maintaining context across invocations.
 

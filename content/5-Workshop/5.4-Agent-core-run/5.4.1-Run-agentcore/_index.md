@@ -14,9 +14,9 @@ First, push your local code to AWS AgentCore using the command:
 agentcore configure -e ./{your_python_file.py}
 ```
 
-![agentsetup1](/aws/static/images/5-Workshop/5.4-S3-onprem/agentsetup1.png)
+![agentsetup1](/images/5-Workshop/5.4-S3-onprem/agentsetup1.png)
 
-![agentsetup2](/aws/static/images/5-Workshop/5.4-S3-onprem/agentsetup2.png)
+![agentsetup2](/images/5-Workshop/5.4-S3-onprem/agentsetup2.png)
 
 ##### 1. Agent Name
 
@@ -61,5 +61,5 @@ agentcore launch --env GROQ_API_KEY=your_api_key_here
 
 When the terminal shows **Running**, your Agent is successfully running.
 
-![goodrun](/aws/static/images/5-Workshop/5.4-S3-onprem/agentsetupdone.png)
+![goodrun](/images/5-Workshop/5.4-S3-onprem/agentsetupdone.png)
 

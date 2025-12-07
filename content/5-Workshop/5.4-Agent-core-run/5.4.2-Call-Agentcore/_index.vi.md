@@ -15,7 +15,7 @@ Dùng lệnh:
 ``` bash
 agentcore invoke "{'prompt': 'Tell me about roaming activations'}"
 ```
-![test1](/aws/static/images/5-Workshop/5.4-S3-onprem/test1.png)
+![test1](/images/5-Workshop/5.4-S3-onprem/test1.png)
 
 Agent sẽ trả lời dựa trên dữ liệu bạn đã triển khai (database + logic
 trong code).
@@ -28,11 +28,11 @@ Sau khi hỏi lần đầu, bạn tiếp tục hỏi một câu có liên quan -
 ``` bash
 agentcore invoke "{'prompt': 'Activate it for Vietnam'}"
 ```
-![test2](/aws/static/images/5-Workshop/5.4-S3-onprem/test2.png)
+![test2](/images/5-Workshop/5.4-S3-onprem/test2.png)
 ``` bash
 agentcore invoke "{'prompt': 'which country was i referring to'}"
 ```
-![test3](/aws/static/images/5-Workshop/5.4-S3-onprem/test3.png)
+![test3](/images/5-Workshop/5.4-S3-onprem/test3.png)
 Nếu Agent phản hồi đúng ý và nhớ thông tin trước đó → chứng tỏ **Memory
 hoạt động** và AgentCore đang lưu ngữ cảnh giữa các lần gọi.
 

@@ -30,7 +30,7 @@ Tải AWS CLI:
 
 Sau đó cài đặt theo hướng dẫn.
 
-![CLI](/aws/static/images/5-Workshop/5.2-Prerequisite/cli.png)
+![CLI](/images/5-Workshop/5.2-Prerequisite/cli.png)
 
 
 
@@ -56,7 +56,7 @@ Thêm UV vào PATH:
 ```powershell
 $env:Path = "C:\Users\leamo\.local\bin;$env:Path"
 ```
-![uvpath](/aws/static/images/5-Workshop/5.2-Prerequisite/uv.png)
+![uvpath](/images/5-Workshop/5.2-Prerequisite/uv.png)
 
 > Khởi động lại máy để nhận PATH mới.
 
@@ -70,7 +70,7 @@ Trong thư mục dự án:
 uv init
 ```
 
-![runuv](/aws/static/images/5-Workshop/5.2-Prerequisite/uvinit.png)
+![runuv](/images/5-Workshop/5.2-Prerequisite/uvinit.png)
 
 Sau đó chọn environment trong VS Code.
 
@@ -107,7 +107,7 @@ Nhập lần lượt:
   json
   ```
 
-![conectCLI](/aws/static/images/5-Workshop/5.2-Prerequisite/conectcli.png)
+![conectCLI](/images/5-Workshop/5.2-Prerequisite/conectcli.png)
 
 
 
@@ -120,10 +120,10 @@ uv run which agentcore
 ```
 sau khi chạy sẽ tải các thư viện cần thiết cho AWS Agentcore về máy
 
-![run agentcore](/aws/static/images/5-Workshop/5.2-Prerequisite/whichagent.png)
+![run agentcore](/images/5-Workshop/5.2-Prerequisite/whichagent.png)
 
 ## Tạo Groq API
 bạn vào trang [Groq](https://console.groq.com/keys) và tạo api như hình.Đây là các tool bên ngoài bổ trợ cho Rag của liên kết thông qua AWS Agentcore
-![groqapi](/aws/static/images/5-Workshop/5.2-Prerequisite/groqapi.png)
+![groqapi](/images/5-Workshop/5.2-Prerequisite/groqapi.png)
 
 

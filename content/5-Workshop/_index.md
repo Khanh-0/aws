@@ -28,7 +28,7 @@ In this workshop, we will build a complete **RAG (Retrieval-Augmented Generation
    * [5.3.2. Chunking & Embedding](5.3-architecture/5.3.2-chunking-embedding/)
    * [5.3.3. AgentCore Code Handler](5.3-architecture/5.3.3-code-handler-agentcore/)
 4. [Running AgentCore](5.4-agent-core-run/)
-5. [Resource Cleanup](5.6-cleanup/)
+
 
 #### Tech Stack
 

@@ -26,11 +26,11 @@ Trong giao diện tạo Memory, bạn sẽ thấy các phần sau:
 Số ngày hệ thống lưu lại lịch sử hội thoại chi tiết.  
 Demo này có thể để mặc định **90 ngày**.
 
-![memory](/aws/static/images/5-Workshop/5.3-S3-vpc/memory.png)
+![memory](/images/5-Workshop/5.3-S3-vpc/memory.png)
 
 
 ## 2. Các loại Memory trong AgentCore
-![memory](/aws/static/images/5-Workshop/5.3-S3-vpc/typememory.png)
+![memory](/images/5-Workshop/5.3-S3-vpc/typememory.png)
 
 ### 1. Summarization – Tóm tắt hội thoại  
 **Chức năng:** Tóm tắt nội dung hội thoại sau khi kết thúc hoặc theo chu kỳ.  

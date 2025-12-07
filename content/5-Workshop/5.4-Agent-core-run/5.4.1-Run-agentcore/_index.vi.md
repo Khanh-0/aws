@@ -13,9 +13,9 @@ pre : " <b> 5.4.1 </b> "
 ```bash
 agentcore configure -e ./{ten_file_python.py}
 ````
-![agentsetup1](/aws/static/images/5-Workshop/5.4-S3-onprem/agentsetup1.png)
+![agentsetup1](/images/5-Workshop/5.4-S3-onprem/agentsetup1.png)
 
-![agentsetup2](/aws/static/images/5-Workshop/5.4-S3-onprem/agentsetup2.png)
+![agentsetup2](/images/5-Workshop/5.4-S3-onprem/agentsetup2.png)
 
 ##### 1. Agent Name
 
@@ -74,6 +74,6 @@ agentcore launch --env GROQ_API_KEY=your_api_key_here
 
 Khi terminal báo trạng thái Running, Agent của bạn đã hoạt động thành công.
 
-![goodrun](/aws/static/images/5-Workshop/5.4-S3-onprem/agentsetupdone.png)
+![goodrun](/images/5-Workshop/5.4-S3-onprem/agentsetupdone.png)
 
 
