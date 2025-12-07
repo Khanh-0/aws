@@ -1,30 +1,62 @@
 ---
+
 title: "Workshop"
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Building a RAG Agent with Groq API and AgentCore Memory
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+In this workshop, we will build a complete **RAG (Retrieval-Augmented Generation) Agent** with the following capabilities:
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+* **Calling the Groq API** to use high-performance LLM models
+* **Chunking & Embedding** documents for optimized vector search
+* **AgentCore Memory** to maintain long-term context across chat sessions
+* **Tool Integration** so the agent can automatically search FAQs and reformulate queries
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+**AgentCore** provides a framework for building AI agents with memory persistence, middleware hooks, and tool orchestration — enabling the agent to “remember” conversation history and personalize responses.
 
-#### Content
+#### Contents
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Workshop Overview](5.1-workshop-overview/)
+2. [Prerequisites](5.2-prerequiste/)
+3. [Architecture](5.3-architecture/)
+
+   * [5.3.1. Calling Groq API](5.3-architecture/5.3.1-goi-groq-api/)
+   * [5.3.2. Chunking & Embedding](5.3-architecture/5.3.2-chunking-embedding/)
+   * [5.3.3. AgentCore Code Handler](5.3-architecture/5.3.3-code-handler-agentcore/)
+4. [Running AgentCore](5.4-agent-core-run/)
+5. [Resource Cleanup](5.6-cleanup/)
+
+#### Tech Stack
+
+| Component           | Technology                     |
+| ------------------- | ------------------------------ |
+| **LLM Provider**    | Groq API (OpenAI models)       |
+| **Embedding Model** | HuggingFace (all-MiniLM-L6-v2) |
+| **Vector Store**    | FAISS                          |
+| **Agent Framework** | LangChain + AgentCore          |
+| **Memory Backend**  | AgentCore Memory Store         |
+| **Text Splitting**  | RecursiveCharacterTextSplitter |
+
+#### Prerequisites
+
+* Python 3.8+
+* Groq API Key
+* Basic understanding of RAG and LLMs
+* Familiarity with vector embeddings
+
+#### Expected Outcome
+
+By the end of the workshop, you will have:
+
+* An agent capable of answering FAQs via vector search
+* A memory system that remembers user preferences and context
+* Tool orchestration allowing the agent to decide when to use tools
+* Production-ready code with logging and error handling
+
+---
+
+**Get Started**: [5.1. Workshop Overview](5.1-workshop-overview/)

@@ -5,28 +5,58 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+# Xây dựng RAG Agent với Groq API và AgentCore Memory
 
 #### Tổng quan
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Trong workshop này, chúng ta sẽ xây dựng một **RAG (Retrieval-Augmented Generation) Agent** hoàn chỉnh với khả năng:
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+- **Gọi Groq API** để sử dụng LLM models với hiệu năng cao
+- **Chunking & Embedding** documents để tối ưu vector search
+- **AgentCore Memory** để duy trì context lâu dài qua các phiên chat
+- **Tool Integration** để agent có thể tự động search FAQ và reformulate queries
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+**AgentCore** cung cấp framework để xây dựng AI agents với memory persistence, middleware hooks, và tool orchestration - cho phép agent "nhớ" lịch sử hội thoại và personalize responses.
+
 
 #### Nội dung
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+1. [Tổng quan về Workshop](5.1-workshop-overview/)
+2. [Chuẩn bị](5.2-prerequiste/)
+3. [Kiến trúc](5.3-architecture/)
+   - [5.3.1. Gọi Groq API](5.3-architecture/5.3.1-goi-groq-api/)
+   - [5.3.2. Chunking & Embedding](5.3-architecture/5.3.2-chunking-embedding/)
+   - [5.3.3. Code Handler AgentCore](5.3-architecture/5.3.3-code-handler-agentcore/)
+4. [Chạy Agent Core](5.4-agent-core-run/)
+5. [Dọn dẹp tài nguyên](5.6-cleanup/)
+
+#### Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| **LLM Provider** | Groq API (OpenAI models) |
+| **Embedding Model** | HuggingFace (all-MiniLM-L6-v2) |
+| **Vector Store** | FAISS |
+| **Agent Framework** | LangChain + AgentCore |
+| **Memory Backend** | AgentCore Memory Store |
+| **Text Splitting** | RecursiveCharacterTextSplitter |
+
+#### Điều kiện tiên quyết
+
+- Python 3.8+
+- Groq API Key
+- Kiến thức cơ bản về RAG và LLM
+- Hiểu biết về vector embeddings
+
+#### Kết quả mong đợi
+
+Sau workshop, bạn sẽ có:
+
+Agent có khả năng trả lời FAQ dựa trên vector search  
+Memory system để nhớ preferences và context người dùng  
+Tool orchestration để agent tự quyết định khi nào dùng tool  
+Production-ready code với error handling và logging  
+
+---
+
+**Bắt đầu**: [5.1. Tổng quan về Workshop](5.1-workshop-overview/)
