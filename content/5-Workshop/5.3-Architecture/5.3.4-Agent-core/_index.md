@@ -1,9 +1,9 @@
 ---
 
-title: "5.3.2. Chunking & Embedding"
+title: "Agent Core"
 weight: 3
 chapter: false
-pre: " <b> 5.3.3 </b> "
+pre: " <b> 5.3.4 </b> "
 ----
 ## Why Chunking Matters
 
