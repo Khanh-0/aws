@@ -21,7 +21,7 @@ pre : " <b> 5.2. </b> "
 1. Vào **IAM** → **Users** → chọn **Create user**.
 2. Thêm các quyền đã liệt kê ở trên.
 3. Hoàn tất tạo user và lưu Access Key nếu cần dùng SDK.
-![iam](/aws/static/images/5-Workshop/5.2-Prerequisite/iam.png)
+![iam](/images/5-Workshop/5.2-Prerequisite/iam.png)
 
 #### Tải AWS CLI
 
