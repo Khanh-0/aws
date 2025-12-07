@@ -1,6 +1,6 @@
 ---
 title : "Agent core memory"
-weight : 3
+weight : 1
 chapter : false
 pre : " <b> 5.3.1 </b> "
 ---
