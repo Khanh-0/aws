@@ -1,58 +1,48 @@
 ---
 title: "Worklog Tuần 4"
-weight: 1
+date: 2024-01-01T00:00:00+07:00
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững AWS IAM để quản lý truy cập và bảo mật.
+* Hiểu về EC2 Instance Storage và các loại lưu trữ.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu AWS IAM <br>&emsp; + Users, Groups, Roles <br>&emsp; + Policies và Permissions <br>&emsp; + Best practices cho IAM                                                               | 29/09/2025   | 29/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Thực hành IAM:** <br>&emsp; + Tạo users và groups <br>&emsp; + Gán policies <br>&emsp; + Tạo và sử dụng IAM roles                                                                       | 30/09/2025   | 30/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu EC2 Instance Storage <br>&emsp; + Amazon EBS (Elastic Block Store) <br>&emsp; + EC2 Instance Store <br>&emsp; + Amazon EFS (Elastic File System)                                 | 01/10/2025   | 01/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành Storage:** <br>&emsp; + Tạo và gắn EBS volumes <br>&emsp; + Tạo snapshots <br>&emsp; + Sử dụng EFS cho shared storage                                                         | 02/10/2025   | 02/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Tìm hiểu về backup và disaster recovery <br>&emsp; + EBS snapshots <br>&emsp; + AMI creation <br>&emsp; + Cross-region backup                                                             | 03/10/2025   | 03/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm vững AWS IAM và các khái niệm:
+  * Users, Groups, Roles
+  * Policies và cách gán quyền
+  * MFA (Multi-Factor Authentication)
+  * Best practices về bảo mật IAM
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu rõ về EC2 Instance Storage:
+  * EBS volumes và các loại (gp3, io2, st1, sc1)
+  * EC2 Instance Store (ephemeral storage)
+  * EFS cho shared file system
+  * So sánh giữa các loại storage
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thực hành thành công:
+  * Tạo và quản lý IAM users, groups, roles
+  * Tạo, gắn và quản lý EBS volumes
+  * Tạo snapshots và restore
+  * Thiết lập EFS và mount vào EC2
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hiểu về backup strategies và disaster recovery cho EC2 và storage.
 
 

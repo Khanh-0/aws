@@ -1,58 +1,58 @@
 ---
 title: "Worklog Tuần 10"
-weight: 2
+date: 2024-01-01T00:00:00+07:00
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững các dịch vụ Databases, Data & Analytics.
+* Hiểu về Machine Learning services trên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu Databases in AWS <br>&emsp; + DynamoDB (NoSQL) <br>&emsp; + Amazon Redshift (Data Warehouse) <br>&emsp; + Neptune, DocumentDB, Timestream                                       | 03/11/2025   | 03/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Thực hành Databases:** <br>&emsp; + Tạo DynamoDB table <br>&emsp; + Query và scan operations <br>&emsp; + DynamoDB Streams <br>&emsp; + Global Tables                                  | 04/11/2025   | 04/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu Data & Analytics <br>&emsp; + Amazon Athena <br>&emsp; + AWS Glue <br>&emsp; + Amazon EMR <br>&emsp; + Amazon Kinesis <br>&emsp; + QuickSight                                   | 05/11/2025   | 05/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành Data & Analytics:** <br>&emsp; + Query S3 data với Athena <br>&emsp; + Tạo Glue crawler <br>&emsp; + Setup Kinesis stream                                                    | 06/11/2025   | 06/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Tìm hiểu Machine Learning <br>&emsp; + Amazon SageMaker <br>&emsp; + Rekognition, Comprehend <br>&emsp; + Translate, Polly, Transcribe <br>&emsp; + Amazon Lex                           | 07/11/2025   | 07/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm vững Databases trong AWS:
+  * DynamoDB (NoSQL database)
+  * DynamoDB Streams và Global Tables
+  * Amazon Redshift (Data Warehouse)
+  * Amazon Neptune (Graph Database)
+  * Amazon DocumentDB (MongoDB compatible)
+  * Amazon Timestream (Time series database)
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu về Data & Analytics:
+  * Amazon Athena (serverless query service)
+  * AWS Glue (ETL service)
+  * Amazon EMR (Elastic MapReduce)
+  * Amazon Kinesis (real-time data streaming)
+  * AWS Data Pipeline
+  * Amazon QuickSight (BI service)
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm vững Machine Learning services:
+  * Amazon SageMaker (build, train, deploy ML models)
+  * Amazon Rekognition (image và video analysis)
+  * Amazon Comprehend (NLP service)
+  * Amazon Translate, Polly, Transcribe
+  * Amazon Lex (chatbots)
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thực hành thành công:
+  * Tạo và query DynamoDB tables
+  * Sử dụng Athena để query S3 data
+  * Setup Glue crawler và ETL jobs
+  * Tạo Kinesis stream cho real-time data
+  * Sử dụng SageMaker và Rekognition
 
 

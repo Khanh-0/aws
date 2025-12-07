@@ -22,7 +22,7 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** GenAI Intern
 
-&emsp; **Thời gian thực tập:** Từ ngày 30/08/2025 đến ngày 08/03/2026
+&emsp; **Thời gian thực tập:** Từ ngày 8/09/2025 đến ngày 9/12/2026
 
 ![Ảnh đại diện của bạn](/images/khanh.jpg)
 

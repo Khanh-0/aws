@@ -1,57 +1,51 @@
 ---
 title: "Worklog Tuần 6"
-weight: 1
+date: 2024-01-01T00:00:00+07:00
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững Amazon Route 53 và DNS routing.
+* Hiểu về Classic Solutions Architecture và design patterns.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu Amazon Route 53 <br>&emsp; + DNS fundamentals <br>&emsp; + Hosted zones <br>&emsp; + Routing policies (Simple, Weighted, Latency, Failover, Geolocation)                        | 06/10/2025   | 06/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Thực hành Route 53:** <br>&emsp; + Đăng ký domain hoặc sử dụng domain có sẵn <br>&emsp; + Cấu hình các routing policies <br>&emsp; + Health checks                                     | 07/10/2025   | 07/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu Classic Solutions Architecture <br>&emsp; + 3-tier architecture <br>&emsp; + Stateless web tier <br>&emsp; + Stateful application tier                                           | 08/10/2025   | 08/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Thiết kế kiến trúc mẫu <br>&emsp; + WordPress on AWS <br>&emsp; + E-commerce platform <br>&emsp; + Microservices architecture                                                             | 09/10/2025   | 09/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Vẽ kiến trúc với draw.io <br>&emsp; + Triển khai một kiến trúc 3-tier đơn giản <br>&emsp; + Document architecture decisions                                  | 10/10/2025   | 10/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Nắm vững Amazon Route 53:
+  * DNS fundamentals và cách hoạt động
+  * Hosted zones (public và private)
+  * Các routing policies và use cases
+  * Health checks và DNS failover
+  * Domain registration
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hiểu về Classic Solutions Architecture:
+  * 3-tier architecture (Web, App, Database)
+  * Stateless vs Stateful design
+  * Horizontal vs Vertical scaling
+  * Best practices cho high availability
+  * Cost optimization strategies
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Thực hành thành công:
+  * Cấu hình Route 53 với các routing policies
+  * Thiết lập health checks và failover
+  * Vẽ kiến trúc AWS với draw.io
+  * Triển khai kiến trúc 3-tier đơn giản
+  * Document và present architecture decisions
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Có khả năng thiết kế và triển khai các kiến trúc cơ bản trên AWS.
 
 

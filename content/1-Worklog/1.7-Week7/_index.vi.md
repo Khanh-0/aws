@@ -1,58 +1,53 @@
 ---
 title: "Worklog Tuần 7"
-weight: 1
+date: 2024-01-01T00:00:00+07:00
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững Amazon S3 và các tính năng lưu trữ.
+* Hiểu về S3 security và advanced features.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu Amazon S3 Basics <br>&emsp; + Buckets và Objects <br>&emsp; + Storage classes (Standard, IA, Glacier) <br>&emsp; + Versioning                                                   | 13/10/2025   | 13/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Tìm hiểu S3 Advanced Features <br>&emsp; + Lifecycle policies <br>&emsp; + Cross-region replication <br>&emsp; + S3 Transfer Acceleration <br>&emsp; + S3 Select                          | 14/10/2025   | 14/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu S3 Security <br>&emsp; + Bucket policies <br>&emsp; + IAM policies for S3 <br>&emsp; + Encryption (SSE-S3, SSE-KMS, SSE-C) <br>&emsp; + Access Control Lists (ACLs)             | 15/10/2025   | 15/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành S3:** <br>&emsp; + Tạo buckets và upload objects <br>&emsp; + Cấu hình versioning <br>&emsp; + Thiết lập lifecycle policies                                                  | 16/10/2025   | 16/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành S3 Security:** <br>&emsp; + Cấu hình bucket policies <br>&emsp; + Enable encryption <br>&emsp; + Setup cross-region replication                                              | 17/10/2025   | 17/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm vững Amazon S3:
+  * Buckets, objects và S3 fundamentals
+  * Storage classes và cost optimization
+  * Versioning và object lifecycle
+  * S3 performance optimization
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu về S3 Advanced Features:
+  * Lifecycle policies để tự động chuyển storage class
+  * Cross-region replication cho disaster recovery
+  * S3 Transfer Acceleration
+  * S3 Select và Glacier Select
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm vững S3 Security:
+  * Bucket policies và IAM policies
+  * Encryption options (SSE-S3, SSE-KMS, SSE-C)
+  * Access Control Lists (ACLs)
+  * S3 Block Public Access
+  * Pre-signed URLs
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thực hành thành công:
+  * Tạo và quản lý S3 buckets
+  * Cấu hình versioning và lifecycle policies
+  * Thiết lập encryption và bucket policies
+  * Setup cross-region replication
+  * Host static website trên S3
 
 

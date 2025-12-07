@@ -1,58 +1,55 @@
 ---
 title: "Worklog Tuần 9"
-weight: 1
+date: 2024-01-01T00:00:00+07:00
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững Containers và Serverless trên AWS.
+* Hiểu về serverless architectures và best practices.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu Containers on AWS <br>&emsp; + Docker fundamentals <br>&emsp; + Amazon ECS (Elastic Container Service) <br>&emsp; + Amazon EKS (Elastic Kubernetes Service)                     | 27/10/2025   | 27/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Thực hành Containers:** <br>&emsp; + Tạo Docker image <br>&emsp; + Push image lên ECR <br>&emsp; + Deploy container trên ECS <br>&emsp; + Fargate vs EC2 launch types                  | 28/10/2025   | 28/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu Serverless Overview <br>&emsp; + AWS Lambda fundamentals <br>&emsp; + API Gateway <br>&emsp; + DynamoDB <br>&emsp; + Lambda triggers và integrations                            | 29/10/2025   | 29/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Tìm hiểu Serverless Architectures <br>&emsp; + Serverless web application <br>&emsp; + Event-driven architecture <br>&emsp; + Lambda best practices <br>&emsp; + SAM (Serverless App Model) | 30/10/2025   | 30/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành Serverless:** <br>&emsp; + Tạo Lambda functions <br>&emsp; + Cấu hình API Gateway <br>&emsp; + Kết nối với DynamoDB <br>&emsp; + Deploy serverless app                      | 31/10/2025   | 31/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm vững Containers trên AWS:
+  * Docker fundamentals và containerization
+  * Amazon ECS (Fargate và EC2 launch types)
+  * Amazon EKS cho Kubernetes workloads
+  * Amazon ECR (Elastic Container Registry)
+  * Task definitions và services
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu về Serverless:
+  * AWS Lambda và event-driven computing
+  * Lambda triggers (S3, DynamoDB, API Gateway, etc.)
+  * Lambda layers và environment variables
+  * API Gateway (REST và HTTP APIs)
+  * DynamoDB cho serverless databases
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm vững Serverless Architectures:
+  * Serverless web applications
+  * Event-driven architectures
+  * Lambda best practices (cold starts, memory, timeout)
+  * AWS SAM (Serverless Application Model)
+  * Serverless Framework
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thực hành thành công:
+  * Build và deploy Docker containers trên ECS
+  * Tạo và deploy Lambda functions
+  * Cấu hình API Gateway với Lambda
+  * Tạo serverless CRUD application với DynamoDB
+  * Deploy serverless app với SAM/CloudFormation
 
 

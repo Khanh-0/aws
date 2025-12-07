@@ -22,7 +22,7 @@ chapter: false
 
 &emsp; **Internship Position:** GenAI Intern
 
-&emsp; **Internship Duration:** From 30/08/2025 to 08/03/2025
+&emsp; **Internship Duration:** From 8/09/2025 to 09/12/2025
 
 ![Your profile picture](/images/khanh.jpg)
 

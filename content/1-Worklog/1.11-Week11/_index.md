@@ -1,56 +1,62 @@
 ---
 title: "Week 11 Worklog"
-weight: 2
+date: 2024-01-01T00:00:00+07:00
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master AWS Monitoring, Security and Advanced Identity.
+* Understand AWS VPC and networking.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Learn AWS Monitoring & Performance <br>&emsp; + Amazon CloudWatch (metrics, logs, alarms) <br>&emsp; + AWS CloudTrail <br>&emsp; + AWS Config <br>&emsp; + AWS Trusted Advisor                      | 11/10/2025 | 11/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Practice Monitoring:** <br>&emsp; + Create CloudWatch dashboards <br>&emsp; + Setup alarms and notifications <br>&emsp; + Enable CloudTrail <br>&emsp; + Review Trusted Advisor                   | 11/11/2025 | 11/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Learn Advanced Identity & Security <br>&emsp; + AWS Organizations <br>&emsp; + AWS SSO <br>&emsp; + AWS KMS (Key Management Service) <br>&emsp; + CloudHSM, Secrets Manager                         | 11/12/2025 | 11/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Learn AWS Security Services <br>&emsp; + AWS Shield & WAF <br>&emsp; + Amazon GuardDuty <br>&emsp; + Amazon Inspector <br>&emsp; + AWS Security Hub                                                 | 11/13/2025 | 11/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Learn Amazon VPC <br>&emsp; + Subnets, Route Tables, Internet Gateway <br>&emsp; + NAT Gateway, VPN <br>&emsp; + VPC Peering, Transit Gateway <br>&emsp; + VPC Endpoints                            | 11/14/2025 | 11/14/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 11 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Mastered AWS Monitoring & Performance:
+  * Amazon CloudWatch (metrics, logs, alarms, dashboards)
+  * AWS CloudTrail (audit and compliance)
+  * AWS Config (resource inventory and compliance)
+  * AWS Trusted Advisor (best practices recommendations)
+  * AWS X-Ray (distributed tracing)
 
-* Successfully created and configured an AWS Free Tier account.
+* Understood Advanced Identity & Security:
+  * AWS Organizations (multi-account management)
+  * AWS SSO (Single Sign-On)
+  * AWS KMS (Key Management Service)
+  * AWS CloudHSM
+  * AWS Secrets Manager and Parameter Store
+  * AWS Certificate Manager
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Mastered AWS Security Services:
+  * AWS Shield (DDoS protection)
+  * AWS WAF (Web Application Firewall)
+  * Amazon GuardDuty (threat detection)
+  * Amazon Inspector (vulnerability assessment)
+  * AWS Security Hub (centralized security)
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Understood Amazon VPC:
+  * VPC components (subnets, route tables, IGW, NAT)
+  * Security Groups and NACLs
+  * VPC Peering and Transit Gateway
+  * VPN and Direct Connect
+  * VPC Endpoints (Gateway and Interface)
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully practiced:
+  * Setting up CloudWatch monitoring and alarms
+  * Enabling CloudTrail and Config
+  * Configuring KMS encryption
+  * Creating and managing VPC with public/private subnets
+  * Setting up VPN connection

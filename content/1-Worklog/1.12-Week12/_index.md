@@ -1,56 +1,55 @@
 ---
 title: "Week 12 Worklog"
-weight: 2
+date: 2024-01-01T00:00:00+07:00
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master Disaster Recovery and Migration strategies.
+* Review comprehensively and prepare for AWS Solutions Architect Associate.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Learn Disaster Recovery & Migrations <br>&emsp; + DR strategies (Backup & Restore, Pilot Light, Warm Standby, Multi-Site) <br>&emsp; + AWS Backup <br>&emsp; + AWS DRS (Disaster Recovery Service) | 11/17/2025 | 11/17/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Learn AWS Migration Services <br>&emsp; + AWS Application Discovery Service <br>&emsp; + AWS Migration Hub <br>&emsp; + AWS Database Migration Service (DMS) <br>&emsp; + AWS Server Migration Service (SMS) | 11/18/2025 | 11/18/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Review More Solutions Architecture <br>&emsp; + Hybrid cloud architectures <br>&emsp; + Multi-region architectures <br>&emsp; + Event-driven architectures <br>&emsp; + Well-Architected Framework | 11/19/2025 | 11/19/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Read AWS White Papers & Best Practices <br>&emsp; + AWS Well-Architected Framework <br>&emsp; + Security Best Practices <br>&emsp; + Cost Optimization <br>&emsp; + Reliability Pillar              | 11/20/2025 | 11/20/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Comprehensive review and practice tests:** <br>&emsp; + Review all modules <br>&emsp; + Take practice exams <br>&emsp; + Complete final workshop                                                  | 11/21/2025 | 11/21/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Mastered Disaster Recovery strategies:
+  * Backup & Restore (high RPO/RTO, low cost)
+  * Pilot Light (medium RPO/RTO)
+  * Warm Standby (low RPO/RTO)
+  * Multi-Site/Hot Site (very low RPO/RTO, high cost)
+  * AWS Backup and AWS Elastic Disaster Recovery
 
-* Successfully created and configured an AWS Free Tier account.
+* Understood AWS Migration:
+  * AWS Application Discovery Service
+  * AWS Migration Hub
+  * AWS Database Migration Service (DMS)
+  * AWS Server Migration Service (SMS)
+  * AWS DataSync and Transfer Family
+  * 6 R's of Migration (Rehost, Replatform, Repurchase, Refactor, Retire, Retain)
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Mastered More Solutions Architecture:
+  * Hybrid cloud architectures
+  * Multi-region architectures
+  * Event-driven architectures
+  * Microservices patterns
+  * AWS Well-Architected Framework (5 pillars)
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed AWS learning path:
+  * Studied and practiced 29 modules
+  * Understood main AWS services
+  * Able to design AWS architectures
+  * Ready for AWS Solutions Architect Associate exam
+  * Completed final workshop and submitted via Drive/GitHub

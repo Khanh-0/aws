@@ -1,56 +1,47 @@
 ---
 title: "Week 5 Worklog"
-weight: 1
+date: 2024-01-01T00:00:00+07:00
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand High Availability and Scalability in AWS.
+* Master database services: RDS, Aurora, ElastiCache.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Learn High Availability & Scalability <br>&emsp; + Multi-AZ deployments <br>&emsp; + Auto Scaling Groups <br>&emsp; + Elastic Load Balancer (ALB, NLB, CLB)                                          | 09/29/2025 | 09/29/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Practice HA & Scalability:** <br>&emsp; + Create Auto Scaling Group <br>&emsp; + Configure Load Balancer <br>&emsp; + Test scaling policies                                                        | 09/30/2025 | 09/30/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Learn Amazon RDS <br>&emsp; + RDS engines (MySQL, PostgreSQL, Oracle, SQL Server) <br>&emsp; + Multi-AZ and Read Replicas <br>&emsp; + Backup and restore                                           | 10/01/2025 | 10/01/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Learn Amazon Aurora & ElastiCache <br>&emsp; + Aurora MySQL/PostgreSQL <br>&emsp; + Aurora Serverless <br>&emsp; + ElastiCache (Redis, Memcached)                                                    | 10/02/2025 | 10/02/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Practice Database:** <br>&emsp; + Create RDS instance <br>&emsp; + Configure Multi-AZ <br>&emsp; + Create Read Replica <br>&emsp; + Use ElastiCache                                               | 10/03/2025 | 10/03/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Mastered High Availability and Scalability concepts:
+  * Multi-AZ deployments
+  * Auto Scaling Groups and scaling policies
+  * Load Balancing (ALB, NLB, CLB)
+  * Health checks and monitoring
 
-* Successfully created and configured an AWS Free Tier account.
+* Understood AWS database services:
+  * Amazon RDS and database engines
+  * Multi-AZ for high availability
+  * Read Replicas for read scalability
+  * Amazon Aurora and Aurora Serverless
+  * ElastiCache for caching (Redis, Memcached)
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Successfully practiced:
+  * Setting up Auto Scaling Group with Launch Template
+  * Configuring Application Load Balancer
+  * Creating and managing RDS instances
+  * Configuring Multi-AZ and Read Replicas
+  * Using ElastiCache to improve performance
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Understood database backup, restore and disaster recovery strategies.
