@@ -25,7 +25,7 @@ Trong phần này, chúng ta sẽ xoá những gì đã khởi tạo trong works
 
 #### Hình minh họa
 
-![Xóa agent trong Amazon Bedrock AgentCore](\images\5-Workshop\5.4-S3-onprem\clean.png)
+![Xóa agent trong Amazon Bedrock AgentCore](\images\5-Workshop\5.4-S3-onprem\test1.png)
 
 
 ### Xóa một Memory trong AgentCore

@@ -28,6 +28,7 @@ Trong workshop này, chúng ta sẽ xây dựng một **RAG (Retrieval-Augmented
    - [5.3.2. Chunking & Embedding](5.3-architecture/5.3.2-chunking-embedding/)
    - [5.3.3. Code Handler AgentCore](5.3-architecture/5.3.3-code-handler-agentcore/)
 4. [Chạy Agent Core](5.4-agent-core-run/)
+5. [Dọn dẹp AgentCore](5.5-Clean/)
 
 #### Tech Stack
 
