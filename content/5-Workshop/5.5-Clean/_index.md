@@ -23,7 +23,7 @@ In this section, we will remove everything that was created during this workshop
 
 #### Illustration
 
-![Deleting an agent in Amazon Bedrock AgentCore](\images\5-Workshop\5.5-Clean\clean.png)
+![Deleting an agent in Amazon Bedrock AgentCore](\images\5-Workshop\5.4-S3-onprem\clean.png)
 
 
 
@@ -38,4 +38,4 @@ After deleting an agent in Runtime, you can manage or delete the **Memory** that
 
 #### Illustration
 
-![Deleting Memory in Amazon Bedrock AgentCore](\images\5-Workshop\5.5-Clean\clean_memory.png)
+![Deleting Memory in Amazon Bedrock AgentCore](\images\5-Workshop\5.4-S3-onprem\clean_memory.png)
