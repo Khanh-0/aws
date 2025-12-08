@@ -21,9 +21,8 @@ In this section, we will remove everything that was created during this workshop
 5. Click the **Delete** button at the top right.
 6. Confirm the deletion when AWS prompts you. The agent will be permanently removed from the Runtime resources list.
 
-#### Illustration
 
-![Deleting an agent in Amazon Bedrock AgentCore](\images\5-Workshop\5.4-S3-onprem\clean.png)
+![Deleting an agent in Amazon Bedrock AgentCore](/images/5-Workshop/5.5-Clean/clean.png)
 
 
 
@@ -36,6 +35,6 @@ After deleting an agent in Runtime, you can manage or delete the **Memory** that
 3. Click the **Delete** button at the top right.
 4. Confirm the deletion when AWS prompts you. The memory will be removed from the system.
 
-#### Illustration
 
-![Deleting Memory in Amazon Bedrock AgentCore](\images\5-Workshop\5.4-S3-onprem\clean_memory.png)
+
+![Deleting Memory in Amazon Bedrock AgentCore](/images/5-Workshop/5.5-Clean/clean_memory.png)
