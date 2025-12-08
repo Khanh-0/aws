@@ -1,6 +1,6 @@
 ---
 
-title: "Workshop"
+title: "Clean Up"
 weight: 5
 chapter: false
 pre: " <b> 5.5 </b> "
@@ -10,7 +10,7 @@ pre: " <b> 5.5 </b> "
 
 Trong phần này, chúng ta sẽ xoá những gì đã khởi tạo trong workshop lần này
 
----
+
 
 ### Xóa một Agent trong AgentCore Runtime
 
@@ -38,7 +38,7 @@ Sau khi xóa agent trong Runtime, bạn có thể quản lý hoặc xóa **Memor
 4. Xác nhận thao tác xóa khi AWS yêu cầu. Memory sẽ bị xóa khỏi hệ thống.
 
 
----
+
 
 #### Hình minh họa
 
