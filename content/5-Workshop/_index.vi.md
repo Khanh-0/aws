@@ -18,6 +18,7 @@ Trong workshop này, chúng ta sẽ xây dựng một **RAG (Retrieval-Augmented
 
 **AgentCore** cung cấp framework để xây dựng AI agents với memory persistence, middleware hooks, và tool orchestration - cho phép agent "nhớ" lịch sử hội thoại và personalize responses.
 
+![kientruc](/images/5-Workshop/5.1-Workshop-overview/kientruc.png)
 
 #### Nội dung
 

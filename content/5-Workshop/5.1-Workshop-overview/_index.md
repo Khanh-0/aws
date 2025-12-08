@@ -17,3 +17,5 @@ pre: " <b> 5.1. </b> "
 * **"Adding memory to RAG"** — explore how the RAG Agent can remember each piece of data during interactions with users.
 * **"Deploy AWS AgentCore"** — understand how to deploy AWS AgentCore.
 * **"Publish API"** — learn how to call AgentCore through an API.
+
+![kientruc](/images/5-Workshop/5.1-Workshop-overview/kientruc.png)

@@ -17,7 +17,7 @@ In this workshop, we will build a complete **RAG (Retrieval-Augmented Generation
 * **Tool Integration** so the agent can automatically search FAQs and reformulate queries
 
 **AgentCore** provides a framework for building AI agents with memory persistence, middleware hooks, and tool orchestration — enabling the agent to “remember” conversation history and personalize responses.
-
+![kientruc](/images/5-Workshop/5.1-Workshop-overview/kientruc.png)
 #### Contents
 
 1. [Workshop Overview](5.1-workshop-overview/)

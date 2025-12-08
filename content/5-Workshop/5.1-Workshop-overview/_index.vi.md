@@ -17,3 +17,6 @@ pre : " <b> 5.1. </b> "
 + **"Thêm bộ nhớ cho Rag"** tìm hiểu cách mà Agent Rag có thể nhớ được từng dữ liệu khi tương tác với người đùng
 + **"Deploy Aws Agent Core"** tim hiểu cách mà triển khai được Aws Agent Core
 + **"Triển khai API"** cách gọi Agent Core thông qua API
+
+
+![kientruc](/images/5-Workshop/5.1-Workshop-overview/kientruc.png)
