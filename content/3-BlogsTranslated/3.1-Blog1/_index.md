@@ -1,125 +1,146 @@
 ---
-title: "Blog 1"
+
+title: "Dynamic Kubernetes Request Right Sizing with Kubecost"
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
----
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+----------------------
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+# Dynamic Kubernetes Request Right Sizing with Kubecost
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+This article explores how to use the **Kubecost Amazon Elastic Kubernetes Service (Amazon EKS) add-on** to reduce infrastructure costs and optimize Kubernetes performance. The *Container Request Right Sizing* feature helps assess how container requests are configured, identify inefficiencies, and optimize them manually or automatically.
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+We will also cover how to evaluate right sizing recommendations and apply updates either once or on a schedule, helping your Amazon EKS environment stay continuously optimized.
 
----
+## What is a Container Request?
 
-## Architecture Guidance
+In Kubernetes, a *container request* is the minimum CPU and memory a workload declares so the scheduler can place the pod on an appropriate node.
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
+* The scheduler finds nodes with sufficient unused resources.
+* Once a pod is placed, those resources are “reserved” even if the container doesn’t fully use them.
+* Overly high requests → wasted resources and higher costs.
+* Requests also affect the Quality-of-Service (QoS) tier and eviction decisions.
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
+## Kubecost Savings Insights
 
-**The solution architecture is now as follows:**
+The Kubecost Amazon EKS add-on provides detailed visibility into containers that request excessive resources.
 
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+The *Container Request Sizing* dashboard shows:
 
----
+* Containers that can be optimized
+* Current CPU/memory request efficiency
+* Average and peak CPU/memory usage
+* Estimated monthly cost savings
+* Total potential cluster savings
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+![1](/images/Blog/Blog_1/bl1_1.png)
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+> *Figure 1: Container Request Right Sizing recommendations*
 
----
+Right sizing is especially effective in dev, test, and staging environments where performance requests are often “over-provisioned”.
 
-## Technology Choices and Communication Scope
+## Customizing Resize Recommendations
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Kubecost allows adjusting recommendations based on:
 
----
+* Workload type
+* Criticality
+* Operational goals
 
-## The Pub/Sub Hub
+You can choose prebuilt profiles such as:
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+* `development`
+* `production`
+* `high availability`
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+Or create your own custom profile.
 
----
+Adjustable parameters include:
 
-## Core Microservice
+* CPU/memory target utilization
+* Query window (48h, 7 days, …)
+* Filter workloads by label, namespace, controller
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
+## Acting on Kubecost Recommendations
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+### 1. One-time Resize
 
----
+**Resize Requests Now** in the dashboard applies the suggested requests immediately to:
 
-## Front Door Microservice
+* Deployments
+* StatefulSets
+* Jobs
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
+Reflecting the profile you selected.
+![2](/images/Blog/Blog_1/bl1_2.png)
 
----
+> *Figure 2: Enable Resize Requests and Enable Autoscaling*
 
-## Staging ER7 Microservice
+### 2. Scheduled Right Sizing
 
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
+Select **Enable Autoscaling** to:
 
----
+* Set up recurring resize jobs
+* Update requests based on recent usage data
+* Maintain optimized requests over time
 
-## New Features in the Solution
+Example:
+A job runs every 2 hours, based on 48h of data, targeting 80% CPU/memory utilization.
 
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
+### 3. Automation via Helm
+
+You can enable automatic right sizing during Kubecost installation with Helm.
+
+Example configuration:
+
 ```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+clusterController:
+  enabled: true
+  actionConfigs:
+    containerRightsize:
+      filterConfig:
+        - filter: |
+            controllerKind:"deployment"
+      schedule:
+        start: "2024-08-20T00:00:00Z"
+        frequencyMinutes: 120
+        recommendationQueryWindow: "48h"
+        targetUtilizationCPU: 0.8
+        targetUtilizationMemory: 0.8
+```
+
+This configuration:
+
+* Runs every 2 hours
+* Targets 80% utilization
+* Applies to all Deployments
+* Ideal for platform teams wanting to enforce best practices automatically
+
+## Conclusion
+
+Practical benefits from Kubecost request sizing:
+
+* Reduce **20–60%** of compute costs in non-production environments
+* Increase node utilization
+* Faster pod scheduling
+* Optimize performance and reduce bottlenecks
+
+Kubecost helps you:
+
+* Identify inefficient workloads
+* Get data-driven recommendations
+* Customize optimization strategies
+* Apply changes manually or automatically
+
+If you haven’t used Kubecost yet, start at the Get Started page to install it in your EKS cluster.
+
+## About the Authors
+
+| ![Kai](/images/Blog/Blog_1/blavt1.png) | **Kai Wombacher**
+Product Director at IBM Kubecost, specializing in optimizing large-scale Kubernetes costs. |
+
+| ![Jason](images/Blog/Blog_1/blavt2.png) | **Jason Janiak**
+Partner Solutions Architect at AWS. |
+
+| ![Mike](images/Blog/Blog_1/blavt3.png) | **Mike Stefaniak**
+Senior Director, Amazon EKS Product Team at AWS. |
