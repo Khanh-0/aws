@@ -1,5 +1,5 @@
 ---
-title: "APT Magic – Đề Xuất Giải Pháp"
+title: "Proposal"
 date: "2025-10-28"
 weight: 2
 chapter: false
